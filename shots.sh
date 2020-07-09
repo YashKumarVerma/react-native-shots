@@ -26,7 +26,7 @@ function init( ) {
     yarn unlink "react-native"
 
     echo "$PREFIX Installing all modules"
-    # yarn install --force
+    yarn install --force
 
     echo "$PREFIX Updating Metro configurations"
     sed -i "/const reactNativePath = /c\const reactNativePath = path.resolve(__dirname, 'node_modules', 'react-native');" metro.config.js
